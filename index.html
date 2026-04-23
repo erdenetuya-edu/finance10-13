@@ -333,6 +333,8 @@
     <div class="name-date">
       <label>Нэр:</label>
       <input type="text" id="inp-name" placeholder="Нэрээ бич...">
+      <label>Сургуулийн нэр:</label>
+      <input type="text" id="inp-school" placeholder="Сургуулиа бич...">
       <label>Огноо:</label>
       <input type="date" id="inp-date" >
     </div>
@@ -501,19 +503,21 @@ const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwcc0aRMwytpa5Kx7eJx
 
 function submitForm() {
   const name    = document.getElementById('inp-name').value.trim();
+  const school  = document.getElementById('inp-school').value.trim();
   const wish    = document.getElementById('inp-wish').value.trim();
   const price   = document.getElementById('inp-price').value || '0';
   const have    = document.getElementById('inp-have').value  || '0';
   const methods = [...document.querySelectorAll('#check-list li.checked')].map(l => l.dataset.val);
 
-  if (!name) { alert('Нэрээ бичнэ үү! 😊'); return; }
+  if (!name)   { alert('Нэрээ бичнэ үү! 😊'); return; }
+  if (!school) { alert('Сургуулийн нэрээ бичнэ үү! 🏫'); return; }
   if (!wish && !price) { alert('Мөрөөдлөө бичнэ үү! 🎯'); return; }
 
   const btn = document.querySelector('.btn-submit');
   btn.textContent = '⏳ Илгээж байна...';
   btn.disabled = true;
 
-  const payload = { name, wish, price, have, methods: methods.join(', ') };
+  const payload = { name, school, wish, price, have, methods: methods.join(', ') };
 
   fetch(SCRIPT_URL, {
     method: 'POST',
