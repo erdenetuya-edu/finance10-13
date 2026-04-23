@@ -246,14 +246,14 @@
   <!-- Header -->
   <div class="header">
     <div class="age-badge">
-      Мөрөөдлийн<br><span>10-13</span>
+      <span>10-12 нас</span>
     </div>
     <div class="title">🚀 Миний хуримтлалын зорилго</div>
     <div class="name-date">
       <label>Нэр:</label>
       <input type="text" id="inp-name" placeholder="Нэрээ бич...">
       <label>Огноо:</label>
-      <input type="date" id="inp-date">
+      <input type="date" id="inp-date" >
     </div>
   </div>
 
@@ -279,7 +279,7 @@
         <span class="wish-icon" title="Шоколад" data-val="Шоколад">🍫</span>
         <span class="wish-icon" title="Бусад" data-val="">➕</span>
       </div>
-      <p class="hint-text">🖊️ Мөрөөдлөө зурж эсвэл бичиж болно:</p>
+      <p class="hint-text">🖊️ Мөрөөдлийн зүйлээ сонгож эсвэл бичиж болно:</p>
       <textarea class="draw-area" id="inp-wish" placeholder="Би хүсэж буй зүйлээ энд бичнэ..."></textarea>
     </div>
 
@@ -294,15 +294,15 @@
       </div>
       <span class="calc-emoji">🖩</span>
       <div class="field-row">
-        <label>Ямар үнэтэй вэ? <span class="currency">₮</span></label>
+        <label>Авах зүйл чинь ямар үнэтэй вэ? <span class="currency">₮</span></label>
         <input type="number" id="inp-price" placeholder="0" min="0" oninput="calcProgress()">
       </div>
       <div class="field-row">
-        <label>Би одоо хэдэн төгрөгтэй вэ? <span class="currency">₮</span></label>
+        <label>Надад одоо хэдэн төгрөг байгаа вэ? <span class="currency">₮</span></label>
         <input type="number" id="inp-have" placeholder="0" min="0" oninput="calcProgress()">
       </div>
       <div class="result-box" id="result-box">
-        <div class="result-label">Надад нэмэлтээр хэрэгтэй</div>
+        <div class="result-label">Надад нэмэлтээр хэрэгтэй мөнгө</div>
         <div class="result-val" id="result-val">— ₮</div>
       </div>
     </div>
@@ -318,20 +318,20 @@
       </div>
       <span class="pig-emoji">🐷</span>
       <ul class="check-list" id="check-list">
-        <li onclick="toggleCheck(this)" data-val="Гэрийн ажилд туслах">
-          <input type="checkbox"> 🏠 Гэрийн ажилд туслах
+        <li onclick="toggleCheck(this)" data-val="Уралдаан, тэмцээнд орж шагнуулах">
+          <input type="checkbox"> 🏠 Уралдаан, тэмцээнд орж шагнуулах
         </li>
-        <li onclick="toggleCheck(this)" data-val="Бэлгийн мөнгө хадгалах">
-          <input type="checkbox"> 🎁 Бэлгийн мөнгө хадгалах
+        <li onclick="toggleCheck(this)" data-val="Бэлгэнд ирсэн мөнгөө хадгалах">
+          <input type="checkbox"> 🎁 Бэлгэнд ирсэн мөнгөө хадгалах
         </li>
-        <li onclick="toggleCheck(this)" data-val="Өдрийн мөнгөнөөсөө илүүлэх">
-          <input type="checkbox"> 💰 Өдрийн мөнгөнөөсөө илүүлэх
+        <li onclick="toggleCheck(this)" data-val="Өдрийн амттан авах мөнгөнөөсөө илүүчлэх">
+          <input type="checkbox"> 💰 Өдрийн амттан авах мөнгөнөөсөө илүүчлэх
         </li>
         <li onclick="toggleCheck(this)" data-val="Бага багаар тогтмол хадгалах">
           <input type="checkbox"> 🏦 Бага багаар тогтмол хадгалах
         </li>
-        <li onclick="toggleCheck(this)" data-val="Зарим тоглоом зараад мөнгө болгох">
-          <input type="checkbox"> 🎮 Зарим тоглоом зараад мөнгө болгох
+        <li onclick="toggleCheck(this)" data-val="Хуучин ном, тоглоомоо зарж орлого олох">
+          <input type="checkbox"> 🎮 Хуучин ном, тоглоомоо зарж орлого олох
         </li>
       </ul>
     </div>
@@ -342,7 +342,7 @@
         <div class="step-num">4</div>
         <div>
           <div class="step-label">АЛХАМ</div>
-          <div class="card-title">Хуримтлалын ахиц 🌟 — Мөнгө цуглуулах тутамдаа одыг будаарай!</div>
+          <div class="card-title">Хуримтлалын ахиц 🌟 — Мөнгө цуглуулах тутамд од нэмэгдэнэ 🌟</div>
         </div>
       </div>
       <div class="progress-area">
@@ -374,8 +374,8 @@
 
   <div class="success" id="success">
     <span class="success-emoji">🎉</span>
-    <h2>Баяр хүргэе! Чи маш сайн!</h2>
-    <p>Чиний хуримтлалын зорилго хадгалагдлаа.<br>Одоо зорилгодоо хүрэхийн тулд аялал эхэллээ! 🚀⭐</p>
+    <h2>Баяр хүргэе! Чи маш сайн байлаа!</h2>
+    <p>Чиний хуримтлалын зорилго хадгалагдлаа.<br>Одоо зорилгодоо хүрэх аялал чинь эхэллээ! 🚀⭐</p>
   </div>
 
   <div class="astronaut">🧑‍🚀</div>
