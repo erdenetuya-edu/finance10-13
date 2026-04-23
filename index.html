@@ -46,7 +46,7 @@
   /* Header */
   .header {
     display: flex; align-items: flex-start; justify-content: space-between;
-    margin-bottom: 16px; flex-wrap: nowrap; gap: 10px;
+    margin-bottom: 16px; flex-wrap: wrap; gap: 10px;
   }
   .age-badge {
     background: linear-gradient(135deg, #FF64C8, #C026A0);
@@ -68,6 +68,10 @@
     background: rgba(255,100,200,0.08); border-radius: 12px;
     padding: 10px 14px; min-width: 180px; flex-shrink: 0;
     border: 1.5px solid rgba(255,100,200,0.3);
+  }
+  @media(max-width: 600px) {
+    .header { flex-direction: column; }
+    .name-date { width: 100%; min-width: unset; }
   }
   .name-date label { display: block; color: #FF9FDC; font-size: 12px; font-weight: 700; margin-bottom: 4px; }
   .name-date input {
